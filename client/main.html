@@ -1,0 +1,145 @@
+<head>
+  <title>Mycanvas</title>
+</head>
+
+<body>
+ 
+ <nav class="navbar navbar-fixed-top navbar-color">
+   <div class="nav navbar-right">
+        <div class="navbar-text padding-right">
+          <div class="text-color">
+           <strong> {{> loginButtons}} </strong>
+          </div>
+
+        </div>   
+  </div>  
+</nav>
+
+<div class="topcanvasbuttons">{{> wall}}</div>
+
+
+
+</body>
+
+<template name="wall">
+
+<table style="width:80%">
+
+<tr>
+  <td class='canvas-background'>{{> canvas}} </td>
+
+  <td class="canvas-tools">
+  <button class='thicker'>Thicker</button>
+  <button class='thinner'>Thinner</button>
+  <button class='clear fa fa-eraser'>Clear</button>
+
+<table style="width:100%">
+   <tr>
+    <td><button class='black btn-black btn-lg'></button></td>
+    <td><button class='darkmaroon btn-darkmaroon btn-lg'></button></td>
+    <td><button class='darkbrown btn-darkbrown btn-lg'></button></td>
+    <td><button class='darkolive btn-darkolive btn-lg'></button></td>
+    <td><button class='darkgreen btn-darkgreen btn-lg'></button></td>
+    <td><button class='darkbluegreen btn-darkbluegreen btn-lg'></button></td>
+    <td><button class='darkteal btn-darkteal btn-lg'></button></td>
+    <td><button class='darkblue btn-darkblue btn-lg'></button></td>
+    <td><button class='darkindigo btn-darkindigo btn-lg'></button></td>
+    <td><button class='darkpurple btn-darkpurple btn-lg'></button></td>
+  </tr>
+  <tr>
+     <td><button class='gray btn-gray btn-lg'></button></td>
+     <td><button class='maroon btn-maroon btn-lg'></button></td>
+     <td><button class='brown btn-brown btn-lg'></button></td>  
+     <td><button class='mediumolive btn-mediumolive btn-lg'></button></td>  
+     <td><button class='mediumgreen btn-mediumgreen btn-lg'></button></td>  
+     <td><button class='mediumbluegreen btn-mediumbluegreen btn-lg'></button></td>  
+     <td><button class='mediumteal btn-mediumteal btn-lg'></button></td>  
+     <td><button class='mediumblue btn-mediumblue btn-lg'></button></td>    
+     <td><button class='mediumindigo btn-mediumindigo btn-lg'></button></td>  
+     <td><button class='mediumpurple btn-mediumpurple btn-lg'></button></td>  
+  </tr>
+  <tr>
+     <td><button class='darkgray btn-darkgray btn-lg'></button></td>
+     <td><button class='firebrick btn-firebrick btn-lg'></button></td>  
+     <td><button class='lightbrown btn-lightbrown btn-lg'></button></td>  
+     <td><button class='olive btn-olive btn-lg'></button></td>  
+     <td><button class='green btn-green btn-lg'></button></td>  
+     <td><button class='bluegreen btn-bluegreen btn-lg'></button></td>  
+     <td><button class='teal btn-teal btn-lg'></button></td>  
+     <td><button class='blue btn-blue btn-lg'></button></td>  
+     <td><button class='indigo btn-indigo btn-lg'></button></td>  
+     <td><button class='purple btn-purple btn-lg'></button></td>  
+  </tr>
+  <tr>
+     <td><button class='silver btn-silver btn-lg'></button></td>
+     <td><button class='red btn-red btn-lg'></button></td>  
+     <td><button class='orangebrown btn-orangebrown btn-lg'></button></td>  
+     <td><button class='lime btn-lime btn-lg'></button></td>  
+     <td><button class='apple btn-apple btn-lg'></button></td>  
+     <td><button class='lightbluegreen btn-lightbluegreen btn-lg'></button></td>  
+     <td><button class='cyan btn-cyan btn-lg'></button></td>  
+     <td><button class='darksky btn-darksky btn-lg'></button></td>  
+     <td><button class='lightindigo btn-lightindigo btn-lg'></button></td>  
+     <td><button class='lightpurple btn-lightpurple btn-lg'></button></td>  
+  </tr>
+  <tr>
+     <td><button class='lightgray btn-lightgray btn-lg'></button></td>
+     <td><button class='orangered btn-orangered btn-lg'></button></td>  
+     <td><button class='darkorange btn-darkorange btn-lg'></button></td>  
+     <td><button class='yellow btn-yellow btn-lg'></button></td>  
+     <td><button class='limegreen btn-limegreen btn-lg'></button></td>  
+     <td><button class='darkspringgreen btn-darkspringgreen btn-lg'></button></td>  
+     <td><button class='aqua btn-aqua btn-lg'></button></td>  
+     <td><button class='mediumsky btn-mediumsky btn-lg'></button></td>  
+     <td><button class='violet btn-violet btn-lg'></button></td>  
+     <td><button class='fucsia btn-fucsia btn-lg'></button></td>  
+  </tr>
+  <tr>
+     <td><button class='gainsboro btn-gainsboro btn-lg'></button></td>
+     <td><button class='coral btn-coral btn-lg'></button></td>  
+     <td><button class='orange btn-orange btn-lg'></button></td>  
+     <td><button class='mediumyellow btn-mediumyellow btn-lg'></button></td>  
+     <td><button class='lightapple btn-lightapple btn-lg'></button></td>  
+     <td><button class='springgreen btn-springgreen btn-lg'></button></td>  
+     <td><button class='mediumaqua btn-mediumaqua btn-lg'></button></td>  
+     <td><button class='sky btn-sky btn-lg'></button></td>  
+     <td><button class='mediumviolet btn-mediumviolet btn-lg'></button></td>  
+     <td><button class='lightfucsia btn-lightfucsia btn-lg'></button></td>  
+  </tr>
+  <tr>
+     <td><button class='whitesmoke btn-whitesmoke btn-lg'></button></td>
+     <td><button class='lightsalmon btn-lightsalmon btn-lg'></button></td>  
+     <td><button class='lightorange btn-lightorange btn-lg'></button></td>  
+     <td><button class='lightyellow btn-lightyellow btn-lg'></button></td>  
+     <td><button class='lightgreen btn-lightgreen btn-lg'></button></td>  
+     <td><button class='lightspringgreen tn-lightspringgreen btn-lg'></button></td>  
+     <td><button class='lightaqua btn-lightaqua btn-lg'></button></td>  
+     <td><button class='lightsky btn-lightsky btn-lg'></button></td>  
+     <td><button class='lightviolet btn-lightviolet btn-lg'></button></td>  
+     <td><button class='pink btn-pink btn-lg'></button></td>  
+  </tr>
+  <tr>
+     <td><button class='white btn-white btn-lg'></button></td>
+     <td><button class='antiquewhite btn-antiquewhite btn-lg'></button></td>  
+     <td><button class='whiteorange btn-whiteorange btn-lg'></button></td>  
+     <td><button class='whiteyellow btn-whiteyellow btn-lg'></button></td>  
+     <td><button class='whitegreen btn-whitegreen btn-lg'></button></td>  
+     <td><button class='whitespringgreen btn-whitespringgreen btn-lg'></button></td>  
+     <td><button class='whiteaqua btn-whiteaqua btn-lg'></button></td>  
+     <td><button class='whitesky btn-whitesky btn-lg'></button></td>  
+     <td><button class='whiteviolet btn-whiteviolet btn-lg'></button></td>  
+     <td><button class='lightpink btn-lightpink btn-lg'></button></td>  
+  </tr>
+
+  <button class='save'>Save</button>
+
+</table>
+</td>
+</tr>
+</table>
+
+</template>
+
+<template name="canvas">
+  <div id='canvas'></div>
+</template>

@@ -1,0 +1,379 @@
+/* CSS declarations go here */
+
+body {
+    background-image: url("swirl_pattern.png");
+    background-repeat: repeat;
+}
+
+.canvas-background{
+	background-color: white;
+}
+
+.padding-right{
+	padding-right: 50px;
+}
+.dropdown-toggle{
+	color: white;
+}
+.navbar-color{
+	background:#008B8B;
+
+}
+.topcanvasbuttons{
+	padding-top: 100px;
+	
+}
+
+/*black color group*/
+
+.btn-black{
+	background-color: black ;
+}
+
+.btn-gray{
+	background-color: #808080;
+}
+
+.btn-darkgray{
+	background-color: #A9A9A9;
+}
+
+.btn-silver{
+	background-color: #C0C0C0;
+}
+
+.btn-lightgray{
+	background-color: #D3D3D3;
+}
+
+.btn-gainsboro{
+	background-color: #DCDCDC;
+}
+
+.btn-whitesmoke{
+	background-color: #F5F5F5;
+}
+
+.btn-white{
+	background-color: white;
+}
+
+/*red color group*/
+
+.btn-darkmaroon{
+	background-color: #330000;
+}
+
+.btn-maroon{
+	background-color: #800000;
+}
+
+.btn-firebrick{
+	background-color: #B22222;
+}
+
+.btn-red{
+	background-color: red;
+}
+
+.btn-orangered{
+	background-color: #FF4500;
+}
+
+.btn-coral{
+	background-color: #FF7F50;
+}
+
+.btn-lightsalmon{
+	background-color: #FFA07A;
+}
+
+.btn-antiquewhite{
+	background-color: #FAEBD7;
+}
+
+/*brown orange color group*/
+
+.btn-darkbrown{
+	background-color: #331900;
+}
+
+.btn-brown{
+	background-color: #663300;
+}
+
+.btn-lightbrown{
+	background-color: #994C00;
+}
+
+.btn-orangebrown{
+	background-color: #CC6600;
+}
+
+.btn-darkorange{
+	background-color: #FF8000;
+}
+
+.btn-orange{
+	background-color: #FF9933;
+}
+
+.btn-lightorange{
+	background-color: #FFB266;
+}
+
+.btn-whiteorange{
+	background-color: #FFCC99;
+}
+
+/*green yellow color group*/
+
+.btn-darkolive{
+	background-color: #333300;
+}
+
+.btn-mediumolive{
+	background-color: #666600;
+}
+
+.btn-olive{
+	background-color: #999900;
+}
+
+.btn-lime{
+	background-color: #CCCC00;
+}
+
+.btn-yellow{
+	background-color: #FFFF00;
+}
+
+.btn-mediumyellow{
+	background-color: #FFFF66;
+}
+
+.btn-lightyellow{
+	background-color: #FFFF99;
+}
+
+.btn-whiteyellow{
+	background-color: #FFFFCC;
+}
+
+/*green color group*/
+
+.btn-darkgreen{
+	background-color: #193300;
+}
+
+.btn-mediumgreen{
+	background-color: #336600;
+}
+
+.btn-green{
+	background-color: #4C9900;
+}
+
+.btn-apple{
+	background-color: #66CC00;
+}
+
+.btn-limegreen{
+	background-color: #99FF33;
+}
+
+.btn-lightapple{
+	background-color: #B2FF66;
+}
+
+.btn-lightgreen{
+	background-color: #CCFF99;
+}
+
+.btn-whitegreen{
+	background-color: #E5FFCC;
+}
+
+/*blue green color group*/
+
+.btn-darkbluegreen{
+	background-color: #003319;
+}
+
+.btn-mediumbluegreen{
+	background-color: #066633;
+}
+
+.btn-bluegreen{
+	background-color: #00994C;
+}
+
+.btn-lightbluegreen{
+	background-color: #00CC66;
+}
+
+.btn-darkspringgreen{
+	background-color: #00FF80;
+}
+
+.btn-springgreen{
+	background-color: #66FF82;
+}
+
+.btn-lightspringgreen{
+	background-color: #99FFCC;
+}
+
+.btn-whitespringgreen{
+	background-color: #CCFFE5;
+}
+
+/*cyan color group*/
+
+.btn-darkteal{
+	background-color: #003333;
+}
+
+.btn-mediumteal{
+	background-color: #006666;
+}
+
+.btn-teal{
+	background-color: #009999;
+}
+
+.btn-cyan{
+	background-color: #00CCCC;
+}
+
+.btn-aqua{
+	background-color: #00FFFF;
+}
+
+.btn-mediumaqua{
+	background-color: #66FFFF;
+}
+
+.btn-lightaqua{
+	background-color: #99FFFF;
+}
+
+.btn-whiteaqua{
+	background-color: #CCFFFF;
+}
+
+/*blue color group*/
+
+.btn-darkblue{
+	background-color: #001933;
+}
+
+.btn-mediumblue{
+	background-color: #003366;
+}
+
+.btn-blue{
+	background-color: #004C99;
+}
+
+.btn-darksky{
+	background-color: #0080FF;
+}
+
+.btn-mediumsky{
+	background-color: #3394FF;
+}
+
+.btn-sky{
+	background-color: #66B2FF;
+}
+
+.btn-lightsky{
+	background-color: #99CCFF;
+}
+
+.btn-whitesky{
+	background-color: #CCE5FF;
+}
+
+/*violet color group*/
+
+.btn-darkindigo{
+	background-color: #190033;
+}
+
+.btn-mediumindigo{
+	background-color: #330066;
+}
+
+.btn-indigo{
+	background-color: #6600CC;
+}
+
+.btn-lightindigo{
+	background-color: #7F00FF;
+}
+
+.btn-violet{
+	background-color: #9933FF;
+}
+
+.btn-mediumviolet{
+	background-color: #B266FF;
+}
+
+.btn-lightviolet{
+	background-color: #CC94FF;
+}
+
+.btn-whiteviolet{
+	background-color: #E5CCFF;
+}
+
+/*purple color group*/
+
+.btn-darkpurple{
+	background-color: #330033;
+}
+
+.btn-mediumpurple{
+	background-color: #660066;
+}
+
+.btn-purple{
+	background-color: #990099;
+}
+
+.btn-lightpurple{
+	background-color: #CC00CC;
+}
+
+.btn-fucsia{
+	background-color: #FF33FF;
+}
+
+.btn-lightfucsia{
+	background-color: #FF99FF;
+}
+
+.btn-pink{
+	background-color: #FFC0CB;
+}
+
+.btn-lightpink{
+	background-color: #FFCCFF;
+}
+
+
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+   background-color: #008B8B;
+}
+
+
+.canvas-tools{
+	vertical-align: text-top;
+	padding-left: 50px;
+}
