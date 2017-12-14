@@ -36,7 +36,22 @@ Accounts.ui.config({
             label: 'Female',
             value: 'f',
             checked: 'checked'
-        }],
+          },  {
+            id: 3,
+            label: 'Genderless',
+            value: 'g',
+            checked: 'checked'
+        },    {
+            id: 4,
+            label: 'Neuter',
+            value: 'n',
+            checked: 'checked'
+        },    {
+            id: 5,
+            label: 'Transgender',
+            value: 't',
+            checked: 'checked'
+     }],
         visible: true
     }, {
         fieldName: 'country',
@@ -52,8 +67,12 @@ Accounts.ui.config({
             id: 2,
             label: 'Spain',
             value: 'es',
-        },   {
+        }, {
             id: 3,
+            label: 'Canada',
+            value: 'ca',
+        },  {
+            id: 4,
             label: 'Other',
             value: 'Other',
         }],
