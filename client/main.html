@@ -5,15 +5,21 @@
 <body>
  
  <nav class="navbar navbar-fixed-top navbar-color">
-   <div class="nav navbar-right">
-        <div class="navbar-text padding-right">
-          <div class="text-color">
-           <strong> {{> loginButtons}} </strong>
+  <div class="container">
+    <div class="navbar-collapse collapse">
+    <ul class="navbar-brand color-font"><strong>My Canvas</strong></ul>    
+         <div class="nav navbar-right">
+            <div class="navbar-text padding-right">
+              <div class="text-color">
+                <ul class="nav navbar-nav navbar-right">          
+               <strong> {{> loginButtons}} </strong>
+            </ul>
           </div>
-
-        </div>   
-  </div>  
-</nav>
+        </div> 
+      </div>  
+    </div> 
+  </div>  <!-- end container-->
+</nav> <!-- end navbar-->
 
 <div class="topcanvasbuttons">{{> wall}}</div>
 
@@ -23,16 +29,18 @@
 
 <template name="wall">
 
-<table style="width:80%">
+<div class="row">
+  <div class="col-md-8 col-xs-12">
+   <div class='canvas-background'> {{> canvas}} </div>
+  </div>
 
-<tr>
-  <td class='canvas-background'>{{> canvas}} </td>
-
-  <td class="canvas-tools">
-  <button class='thicker'>Thicker</button>
-  <button class='thinner'>Thinner</button>
-  <button class='clear fa fa-eraser'>Clear</button>
-
+<div class="col-md-4 col-xs-12">
+ <div class="canvas-tools">
+  <button class='thicker fa fa-paint-brush btn-info btn-lg'><strong>Thicker</strong></button>
+  <button class='thinner fa fa-pencil btn-info btn-lg'><strong>Thinner</strong></button>
+  <button class='clear fa fa-eraser btn-info btn-lg'><strong>Clear</strong></button>
+ 
+ <br><br>
 <table style="width:100%">
    <tr>
     <td><button class='black btn-black btn-lg'></button></td>
@@ -130,13 +138,15 @@
      <td><button class='whiteviolet btn-whiteviolet btn-lg'></button></td>  
      <td><button class='lightpink btn-lightpink btn-lg'></button></td>  
   </tr>
-
-  <button class='save'>Save</button>
-
+ 
 </table>
-</td>
-</tr>
-</table>
+ <br><br>
+ <button class='glyphicon glyphicon-plus btn-new btn-lg'><strong>New</strong></button>
+ <button class='save glyphicon glyphicon-ok btn-save btn-lg'><strong>Save</strong></button>
+ <button class='glyphicon glyphicon-share btn-share btn-lg'><strong>Share</strong></button>
+</div>
+</div>
+</div>
 
 </template>
 
