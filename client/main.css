@@ -5,6 +5,10 @@ body {
     background-repeat: repeat;
 }
 
+.color-font{
+	color: white;
+}
+
 .canvas-background{
 	background-color: white;
 }
@@ -376,4 +380,20 @@ body {
 .canvas-tools{
 	vertical-align: text-top;
 	padding-left: 50px;
+}
+
+.btn-new{
+	background-color:blue;
+	color:white;
+	font-family: sans-serif;
+}
+.btn-save{
+	background-color:green;
+	color:white;
+	font-family: sans-serif;
+}
+.btn-share{
+	background-color:red;
+	color:white;
+	font-family: sans-serif;
 }
