@@ -1,4 +1,4 @@
-Meteor.subscribe("documents");
+Meteor.subscribe("drawings");
 Meteor.subscribe("points");
 
 var canvas;
@@ -52,7 +52,12 @@ Template.wall.events({
 
   "click button.save": function (event) {
     console.log('pichula rica')
-    Meteor.call('save');
+    if (!Meteor.user()){// user not available
+        alert("You need to login first!");
+    }
+    else {
+      Meteor.call('save');
+    }
   },
 
   //choose a color. Initialise the last vals, otherwise a stray line will appear.
