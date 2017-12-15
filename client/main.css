@@ -8,6 +8,10 @@ body {
 .color-font{
 	color: white;
 }
+.brand-canvas{
+	color:white;
+	font-size: 20px;
+}
 
 .canvas-background{
 	background-color: white;
