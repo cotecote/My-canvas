@@ -1,5 +1,6 @@
 <head>
-  <title>Mycanvas</title>
+  <title>My Canvas</title>
+  <link rel="shortcut icon" type="image/x-icon" href="Mycanvasicontransparent.png"/>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
   <button class='clear fa fa-eraser btn-info btn-lg'><strong>Clear</strong></button>
  
  <br><br>
-<table style="width:100%">
+<table style="width:100%"> <!-- color buttons -->
    <tr>
     <td><button class='black btn-black btn-lg'></button></td>
     <td><button class='darkmaroon btn-darkmaroon btn-lg'></button></td>
@@ -160,7 +161,7 @@
           <a class="dropdown-toggle brand-canvas" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Drawings<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 {{#each drawings}}
-                <li><a href="#" class="js-load-draw">{{title}}</a></li>
+                <li><a href="#" class="js-load-draw">{{name}}</a></li>
                 {{/each}}
              </ul>
           </li>
