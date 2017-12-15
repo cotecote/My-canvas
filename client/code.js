@@ -1,5 +1,6 @@
+// subscriptions - allow read access to collections 
 Meteor.subscribe("drawings");
-Meteor.subscribe("points");
+Meteor.subscribe("pointsCollection");
 
 var canvas;
 
@@ -29,6 +30,30 @@ var markPoint = function() {
    lastY = (event.pageY - offset.top);
 }
 
+////////Template helpers////////////
+//////////////////////////////////
+
+Template.navbar.helpers({
+    // return a list of all visible documents
+    drawings:function(){
+      return Drawings.find();
+    }
+  })
+
+
+
+////////Template events////////////
+//////////////////////////////////
+
+Template.navbar.events({
+  // load a drawing
+  "click .js-load-draw":function(event){
+      console.log(this);
+      Session.set("drawid", this._id);
+    }
+  })
+
+
 Template.wall.events({
 
     //Main buttons
@@ -51,16 +76,17 @@ Template.wall.events({
   },
 
   "click button.save": function (event) {
-    console.log('pichula rica')
+    console.log('hola or hello!!!')
     if (!Meteor.user()){// user not available
         alert("You need to login first!");
     }
     else {
-      Meteor.call('save');
+      name = $('#drawing_name').val()
+      Meteor.call('save', name);
     }
   },
 
-  //choose a color. Initialise the last vals, otherwise a stray line will appear.
+  //color palette.
 
   //Black color group
 
