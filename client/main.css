@@ -7,7 +7,7 @@ body {
 
 .select-class{
     margin-left: 150px;
-    margin-top:-40px;
+    margin-top:-30px;
 }
 
 .js-load-button{
@@ -407,6 +407,11 @@ body {
 }
 .btn-share{
 	background-color:red;
+	color:white;
+	font-family: sans-serif;
+}
+.btn-delete{
+	background-color:#B22222;
 	color:white;
 	font-family: sans-serif;
 }

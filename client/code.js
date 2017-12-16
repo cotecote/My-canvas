@@ -11,7 +11,7 @@ var strokeWidth = 1;
 var thickness=1;
 var strokeColor = "black"
 
-var markPoint = function() {
+var markPoint = function(event) {
 
   var offset = $('#canvas').offset();
   if (lastX==0) {// check that x was something not top-left. should probably set this to -1
@@ -602,9 +602,10 @@ Template.wall.events({
 
 Template.canvas.events({
   'click': function (event) {
-    markPoint();
+    markPoint(event);
   },
   'mousedown': function (event) {
+    lastX=0;
     Session.set('draw', true);
   },
   'mouseup': function (event) {
@@ -614,7 +615,7 @@ Template.canvas.events({
   },
   'mousemove': function (event) {
     if (Session.get('draw')) {
-      markPoint();
+      markPoint(event);
     }
   }
 });
