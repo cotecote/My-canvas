@@ -5,6 +5,15 @@ body {
     background-repeat: repeat;
 }
 
+.select-class{
+    margin-left: 150px;
+    margin-top:-40px;
+}
+
+.js-load-button{
+	vertical-align: -120%;
+}
+
 .color-font{
 	color: white;
 }
@@ -28,7 +37,7 @@ body {
 
 }
 .topcanvasbuttons{
-	padding-top: 80px;
+	padding-top: 100px;
 	
 }
 

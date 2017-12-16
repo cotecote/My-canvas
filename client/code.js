@@ -50,8 +50,19 @@ Template.navbar.events({
   "click .js-load-draw":function(event){
       console.log(this);
       Session.set("drawid", this._id);
+    },
+  "click .js-load-button":function(event){
+      console.log('loading draw');
+      draw_id = $('#drawing').val()
+      data = Drawings.findOne({_id: draw_id},{ fields: { draw: 1} })
+
+      console.log(data['draw'])
+      //data = Drawings.fetch(draw_with_id(draw_id))
+      canvas = new Canvas();
+      canvas.draw(data['draw']);
     }
   })
+
 
 
 Template.wall.events({

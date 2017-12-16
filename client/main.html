@@ -22,7 +22,7 @@
    <div class='canvas-background'> {{> canvas}} </div>
   </div>
 
-<div class="col-md-4 col-xs-12">
+<div class="col-md-4 col-xs-8">
  <div class="canvas-tools">
   <button class='thicker fa fa-paint-brush btn-info btn-lg'><strong>Thicker</strong></button>
   <button class='thinner fa fa-pencil btn-info btn-lg'><strong>Thinner</strong></button>
@@ -108,7 +108,7 @@
      <td><button class='lightorange btn-lightorange btn-lg'></button></td>  
      <td><button class='lightyellow btn-lightyellow btn-lg'></button></td>  
      <td><button class='lightgreen btn-lightgreen btn-lg'></button></td>  
-     <td><button class='lightspringgreen tn-lightspringgreen btn-lg'></button></td>  
+     <td><button class='lightspringgreen btn-lightspringgreen btn-lg'></button></td>  
      <td><button class='lightaqua btn-lightaqua btn-lg'></button></td>  
      <td><button class='lightsky btn-lightsky btn-lg'></button></td>  
      <td><button class='lightviolet btn-lightviolet btn-lg'></button></td>  
@@ -153,21 +153,9 @@
         <span class="icon-bar"></span>                        
       </button>
       <span class="navbar-brand fa fa-paint-brush brand-canvas mb-0 color-font"><strong>My Canvas</strong></span>
+
       </div> <!-- end navbar-header-->
-        <!-- drop down list -->
-        <div class="collapse navbar-collapse" id="myNavbar">  
-         <ul class="nav navbar-nav">
-          <li class="dropdown">
-          <a class="dropdown-toggle brand-canvas" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Drawings<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                {{#each drawings}}
-                <li><a href="#" class="js-load-draw">{{name}}</a></li>
-                {{/each}}
-             </ul>
-          </li>
-            <!-- end drop down list -->
-         </ul>
-          <ul class="nav navbar-right">
+      <ul class="nav navbar-right">
             <ul class="navbar-text padding-right">
               <ul class="text-color">
                 <ul class="nav navbar-nav navbar-right">          
@@ -176,6 +164,31 @@
             </ul>
           </ul> 
       </ul> 
+       <!-- drop down list -->
+        <div class="collapse navbar-collapse" id="myNavbar">  
+         <ul class="nav navbar-nav">
+         
+       
+          <div class="row">
+          <div class="col-md-8  col-xs-8 select-class">
+          <tr>
+           <td>
+            <label for="drawing" class="color-font">Select your drawing:</label>
+             <select class="form-control" id="drawing">
+                {{#each drawings}}
+                <option class="js-load-draw" value="{{_id}}">{{name}}</option>
+                {{/each}}
+             </select>
+           </td>
+           <td>
+           <ul><span><button class="js-load-button btn-info btn-lg"><strong>Load</strong></button></span></ul>
+         </td>
+       </tr>
+     </div>
+     </div>
+          <!--</li>
+            end drop down list -->
+         </ul>
     </div> <!-- end collapse navbar-collapse-->
   </div>  <!-- end container-->
 </nav> <!-- end navbar-->
