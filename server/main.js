@@ -20,5 +20,10 @@ Meteor.methods({
   },
   'clear': function () {
     Points.remove({});
-	}
+	},
+  'remove': function (draw_id) {
+    console.log("I'll kill ya");
+    Drawings.remove({_id: draw_id});
+  },
+
 });

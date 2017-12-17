@@ -8,8 +8,22 @@ Meteor.startup( function() {
       canvas.draw(data);
     }
 
-    //if (!Drawings.findOne()){// no documents yet!
-    //  Drawings.insert({title:"my new drawing"});
-    //}
+      console.log('inside meteor autorun');
+    if(Meteor.userId()){
+      console.log('Meteor Logged');
+     $("#btn_load").removeClass("hide-element");
+     console.log('Meteor show load button');
+     $("#drawing").removeClass("hide-element");
+     console.log('Meteor show select');
+  }else {
+    console.log('Meteor Not Logged');
+    $("#btn_load").addClass("hide-element");
+    console.log('Meteor hide load button');
+    $("#drawing").addClass("hide-element");
+    console.log('Meteor hide select');
+  }
+
   });
+
+  
 });

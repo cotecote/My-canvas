@@ -36,10 +36,11 @@ var markPoint = function(event) {
 Template.navbar.helpers({
     // return a list of all visible documents
     drawings:function(){
-      return Drawings.find();
+      console.log("only my drawings");
+      console.log(Meteor.userId());
+      return Drawings.find({owner: Meteor.userId()});
     }
-  })
-
+   }),
 
 
 ////////Template events////////////
@@ -95,6 +96,17 @@ Template.wall.events({
       name = $('#drawing_name').val()
       Meteor.call('save', name);
     }
+  },
+
+  "click button.new": function(event){
+    $('#drawing_name').val("")
+    Meteor.call('clear')
+    console.log("new drawing");
+  },
+
+   "click button.delete": function(event){
+    draw_id= $('#drawing').val()
+    Meteor.call('remove', draw_id);
   },
 
   //color palette.
