@@ -54,6 +54,7 @@ Template.navbar.events({
       //console.log(data['draw'])
       //data = Drawings.fetch(draw_with_id(draw_id))
       //canvas = new Canvas();
+      $("#drawing_id").val(data['_id']) 
       canvas.clear();
       $('#drawing_name').val(data['name'])
       canvas.draw(data['draw']);
@@ -90,12 +91,15 @@ Template.wall.events({
     }
     else {
       name = $('#drawing_name').val()
-      Meteor.call('save', name);
+      draw_id = $('#drawing_id').val()
+      Meteor.call('save', name, draw_id);
     }
   },
 
   "click button.new": function(event){
     $('#drawing_name').val("")
+    $("#drawing_id").val("")
+    canvas.clear();
     Meteor.call('clear')
     console.log("new drawing");
   },

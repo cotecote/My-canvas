@@ -2,12 +2,17 @@
 //////////////////////////////////////
 
 Meteor.methods({
-  'save': function (name) {
+  'save': function (name, draw_id) {
   	console.log('hi everyone');
   	currentDraw = Points.find({}).fetch();
-  	console.log(currentDraw)
-  	Drawings.insert({owner:this.userId, name: name ,draw: currentDraw, time_stamp: new Date()});
-  	console.log(Drawings.find({}).fetch());
+    if (draw_id){
+      console.log("Actualizando")
+      Drawings.update({_id: draw_id}, {owner:this.userId, name: name, draw: currentDraw, time_stamp: new Date()});
+    }
+    else {
+      Drawings.insert({owner:this.userId, name: name, draw: currentDraw, time_stamp: new Date()});
+    }
+  	
   },
   'clear': function () {
     Points.remove({});
