@@ -26,5 +26,5 @@ session
 modules-runtime
 fortawesome:fontawesome
 d3
-autopublish
 insecure
+autopublish

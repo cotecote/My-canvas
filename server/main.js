@@ -1,12 +1,3 @@
- // publish a list of documents the user can see
-Meteor.publish("drawings", function(){
-  return Drawings.find({owner:this.userId});
-}) 
-Meteor.publish("pointsCollection", function(){
-  return Points.find({owner:this.userId});
-}) 
-
-
 //////////Meteor methods//////////////
 //////////////////////////////////////
 

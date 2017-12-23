@@ -1,9 +1,3 @@
-// subscriptions - allow read access to collections 
-Meteor.subscribe("drawings");
-Meteor.subscribe("pointsCollection");
-
-var canvas;
-
 // we use these for drawing more interesting shapes
 var lastX=0;
 var lastY=0;
@@ -55,11 +49,13 @@ Template.navbar.events({
   "click .js-load-button":function(event){
       console.log('loading draw');
       draw_id = $('#drawing').val()
-      data = Drawings.findOne({_id: draw_id},{ fields: { draw: 1} })
+      data = Drawings.findOne({_id: draw_id},{ fields: { draw: 1, name: 1} })
 
-      console.log(data['draw'])
+      //console.log(data['draw'])
       //data = Drawings.fetch(draw_with_id(draw_id))
-      canvas = new Canvas();
+      //canvas = new Canvas();
+      canvas.clear();
+      $('#drawing_name').val(data['name'])
       canvas.draw(data['draw']);
     }
   })
