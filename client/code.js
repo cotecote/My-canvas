@@ -34,7 +34,8 @@ Template.navbar.helpers({
       console.log(Meteor.userId());
       return Drawings.find({owner: Meteor.userId()});
     }
-   }),
+})
+
 
 
 ////////Template events////////////
@@ -56,6 +57,7 @@ Template.navbar.events({
       //canvas = new Canvas();
       $("#drawing_id").val(data['_id']) 
       canvas.clear();
+      Router.go("/drawings/" + data['_id'])
       $('#drawing_name').val(data['name'])
       canvas.draw(data['draw']);
     }
