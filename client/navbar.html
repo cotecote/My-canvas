@@ -1,0 +1,55 @@
+
+<template name="navbar"> 
+
+<nav class="navbar navbar-fixed-top navbar-color">
+  <div class="container-fluid">
+    <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand fa fa-paint-brush brand-canvas mb-0 color-font" href="/"><strong>My Canvas</strong></a>
+
+      </div> <!-- end navbar-header-->
+      <ul class="nav navbar-right">
+            <ul class="navbar-text padding-right">
+              <ul class="text-color">
+                <ul class="nav navbar-nav navbar-right">          
+                  <li><span><strong> {{> loginButtons}} </strong></span></li>
+                </ul>
+            </ul>
+          </ul> 
+      </ul> 
+       <!-- drop down list -->
+        <div class="collapse navbar-collapse" id="myNavbar">  
+         <ul class="nav navbar-nav">
+         
+       
+          <div class="row">
+          <div class="col-md-8  col-xs-8 select-class">
+          <tr>
+           <td>
+            <input type="hidden" id="drawing_id" value="">
+            <label for="drawing" id="label_draw" class="color-font">Select your drawing:</label>
+             <select class="form-control" id="drawing">
+                {{#each drawings}}
+                <option class="js-load-draw" value="{{_id}}">{{name}}</option>
+                {{/each}}
+             </select>
+           </td>
+           <td>
+           <ul><span><button id="btn_load" class="button-hrtl js-load-button btn-info btn-lg"><strong>Load</strong></button></span></ul>
+           <!--<ul><span><button id="btn_edit" class="button-hrtl btn-info btn-lg"><strong>Edit</strong></button></span></ul>-->
+         </td>
+       </tr>
+     </div>
+     </div>
+          <!--</li>
+            end drop down list -->
+         </ul>
+    </div> <!-- end collapse navbar-collapse-->
+  </div>  <!-- end container-->
+</nav> <!-- end navbar-->
+
+</template>
