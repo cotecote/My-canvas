@@ -51,13 +51,10 @@ Template.navbar.events({
       console.log('loading draw');
       draw_id = $('#drawing').val()
       data = Drawings.findOne({_id: draw_id},{ fields: { draw: 1, name: 1} })
-
-      //console.log(data['draw'])
-      //data = Drawings.fetch(draw_with_id(draw_id))
-      //canvas = new Canvas();
       $("#drawing_id").val(data['_id']) 
       canvas.clear();
       Router.go("/drawings/" + data['_id'])
+      $(".fb-share-button").attr("data-href", "http://localhost:3000/drawings/"+data['_id'])
       $('#drawing_name').val(data['name'])
       canvas.draw(data['draw']);
     }
